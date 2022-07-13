@@ -1,0 +1,17 @@
+div.d-flex.justify-content-center
+
+p style="color: green" = notice
+
+- @posts.each do |post|
+  h3 = post.title
+  p = post.content
+  div
+    b Автор:
+    = " #{post.user.email}"
+
+    .mt-5
+    = link_to "Просмотреть", post, class: "btn btn-primary"
+    = link_to "Новый пост", new_post_path, class: "btn btn-primary ms-3"
+
+
+
