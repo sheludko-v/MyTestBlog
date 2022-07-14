@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<p class="d-flex justify-content-center mt-5" style="color: slategrey"><%= notice %></p>
 
 <div id="posts" class="posts">
   <% @posts.each do |post| %>
@@ -7,5 +7,5 @@
 </div>
 
 <div class="dataTables_paginate d-flex justify-content-center mt-4">
-  <%= paginate @posts,:remote => true %>
+  <%= paginate @posts, :remote => true %>
 </div>

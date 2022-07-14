@@ -21,7 +21,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+
             <ul class="navbar-nav navbar-right me-3">
+
               <% if user_signed_in? %>
                 <li class="nav-item">
                   <%= link_to "#{current_user.name}", edit_user_registration_path, class: "nav-link active", method: :delete %>
@@ -41,10 +43,11 @@
           </div>
       </nav>
 
-      <% if !user_signed_in? %>
-        <h2 class="d-flex justify-content-center">Здравствуйте!</h2>
-        <h3 class="d-flex justify-content-center">Пожалуйста, авторизуйтесь.</h3>
-      <% end %>
+      <div class="d-flex justify-content-center">
+        <%= form_tag results_path, method: :get, role: 'search' do %>
+          <%= text_field_tag :query, params[:query], class: "form-control search", placeholder: "Поиск..." %>
+        <% end %>
+      </div>
 
       <%= yield %>
 

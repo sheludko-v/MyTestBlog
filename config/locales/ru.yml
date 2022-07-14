@@ -153,8 +153,8 @@ ru:
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
   views:
     pagination:
-      first: Начало
-      last: Конец
-      previous: Предыдущая
-      next: Следующая
+      first: Первая
+      last: Последняя
+      previous: ◄
+      next: ►
       truncate: ...

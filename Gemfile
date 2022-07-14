@@ -9,11 +9,13 @@ gem "sprockets-rails"
 
 gem "pg", "~> 1.1"
 
+gem "pg_search"
+
 gem "bootstrap-sass"
 
 gem "sass-rails"
 
-gem 'devise-i18n'
+gem "devise-i18n"
 
 gem "devise"
 
