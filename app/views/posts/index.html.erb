@@ -1,14 +1,11 @@
-<div>
-  <p style="color: green;"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 
+<div id="posts" class="posts">
   <% @posts.each do |post| %>
-    <h3><%= post.title %></h3>
-    <p><%= post.content %></p>
-    <p><b>Автор: </b><%= post.user.name %>(<%= post.user.email %>)</p>
-
-    <div class="mt-5">
-      <%= link_to "Просмотреть", post, class: "btn btn-primary" %>
-      <%= link_to "Новый пост", new_post_path, class: "btn btn-primary ms-3" %>
-    </div>
+    <%= render post %>
   <% end %>
+</div>
+
+<div class="dataTables_paginate d-flex justify-content-center mt-4">
+  <%= paginate @posts,:remote => true %>
 </div>

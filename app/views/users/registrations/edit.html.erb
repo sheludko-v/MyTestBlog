@@ -1,15 +1,17 @@
-<%= page_heading("Кабинет #{resource_name.to_s.humanize}") %>
+<%= page_heading("Личный кабинет #{@user.name}") %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <%= link_to "Создать пост", new_post_path, class: "btn btn-primary mt-5" %>
+
   <div class="field mt-3">
-    <%= f.label :name %><br />
+    <%= f.label :name %><br/>
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
 
   <div class="field mt-3">
-    <%= f.label :email %><br />
+    <%= f.label :email %><br/>
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
@@ -18,21 +20,21 @@
   <% end %>
 
   <div class="field mt-3">
-    <%= f.label :password %> <i>(оставьте пустым, если не хотите его менять)</i><br />
+    <%= f.label :password %> <i>(оставьте пустым, если не хотите его менять)</i><br/>
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
+      <br/>
       <em>Минимум <%= @minimum_password_length %> символов</em>
     <% end %>
   </div>
 
   <div class="field mt-3">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br/>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field mt-3">
-    <%= f.label :current_password %> <i>(нам нужен ваш текущий пароль, чтобы подтвердить ваши изменения)</i><br />
+    <%= f.label :current_password %> <i>(нам нужен ваш текущий пароль, чтобы подтвердить ваши изменения)</i><br/>
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
@@ -46,3 +48,6 @@
 <%= button_to "Удалить", registration_path(resource_name), class: "btn btn-danger mb-5", data: { confirm: "Вы уверены?" }, method: :delete %>
 
 <%= link_to "Назад", :back %>
+
+
+

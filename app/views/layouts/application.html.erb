@@ -24,7 +24,7 @@
             <ul class="navbar-nav navbar-right me-3">
               <% if user_signed_in? %>
                 <li class="nav-item">
-                  <%= link_to "Личный кабинет", edit_user_registration_path, class: "nav-link active", method: :delete %>
+                  <%= link_to "#{current_user.name}", edit_user_registration_path, class: "nav-link active", method: :delete %>
                 </li>
                 <li class="nav-item">
                   <%= link_to "Выйти", destroy_user_session_path, class: "nav-link", method: :delete %>
@@ -41,9 +41,7 @@
           </div>
       </nav>
 
-      <% if user_signed_in? %>
-        <h2 class="d-flex justify-content-center">Здравствуйте, <%= current_user.name %>!</h2>
-      <% else %>
+      <% if !user_signed_in? %>
         <h2 class="d-flex justify-content-center">Здравствуйте!</h2>
         <h3 class="d-flex justify-content-center">Пожалуйста, авторизуйтесь.</h3>
       <% end %>

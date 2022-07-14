@@ -1,0 +1,14 @@
+<div id="<%= dom_id post %>" class="post-card">
+
+  <h3 class="post-title"><%= post.title %></h3>
+
+  <p class="post-content"><%= post.content %></p>
+
+  <%= link_to "Читать полностью", post, class: "mt-3" %>
+
+  <p class="post-author">
+    <strong>Автор:</strong>
+    <%= "#{post.user.name} (#{post.user.email})" %>
+  </p>
+
+</div>

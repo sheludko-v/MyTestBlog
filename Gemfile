@@ -17,6 +17,8 @@ gem 'devise-i18n'
 
 gem "devise"
 
+gem "kaminari"
+
 gem "puma", "~> 5.0"
 
 gem "importmap-rails"
