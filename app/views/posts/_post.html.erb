@@ -2,6 +2,8 @@
 
   <h3 class="post-title"><%= post.title %></h3>
 
+  <%= image_tag(post.image.url(:thumb), class: "mb-3", alt: 'Image') if post.image? %>
+
   <p class="post-content"><%= post.content %></p>
 
   <% if user_signed_in? %>

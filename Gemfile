@@ -21,6 +21,10 @@ gem "devise"
 
 gem "kaminari"
 
+gem "carrierwave"
+
+gem "mini_magick"
+
 gem "puma", "~> 5.0"
 
 gem "importmap-rails"
