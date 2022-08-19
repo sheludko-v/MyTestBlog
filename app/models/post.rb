@@ -6,6 +6,6 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :content, presence: true
 
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope :search_everywhere, against: [:title, :content]
 end
