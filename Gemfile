@@ -25,6 +25,16 @@ gem "carrierwave"
 
 gem "mini_magick"
 
+gem "omniauth"
+
+gem "omniauth-google-oauth2"
+
+gem "mini_racer"
+
+gem "activerecord-session_store"
+
+gem "omniauth-rails_csrf_protection"
+
 gem "puma", "~> 5.0"
 
 gem "importmap-rails"

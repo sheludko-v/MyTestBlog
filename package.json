@@ -1,0 +1,8 @@
+{
+  "name": "MyTestBlog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sheludko-v/MyTestBlog.git",
+  "author": "v-sheludko <v.sheludko@dunice.net>",
+  "license": "MIT"
+}
